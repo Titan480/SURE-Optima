@@ -1,0 +1,115 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  line-height: 1.7;
+}
+
+/* ── Header ── */
+
+header {
+  background: #0d2b45;
+  color: #ffffff;
+  padding: 3.5rem 2rem;
+  text-align: center;
+}
+
+.header-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  color: #a8c8e8;
+  font-style: italic;
+}
+
+/* ── Main sections ── */
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+section {
+  margin-top: 3.5rem;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  color: #0d2b45;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #0d2b45;
+}
+
+.about p {
+  font-size: 1.05rem;
+}
+
+/* ── Services ── */
+
+.service-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.service-list li {
+  background: #f4f7fa;
+  border-left: 4px solid #0d2b45;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.service-list h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+  color: #0d2b45;
+}
+
+.service-list p {
+  font-size: 0.95rem;
+  color: #3a3a3a;
+}
+
+/* ── Footer ── */
+
+footer {
+  background: #0d2b45;
+  color: #c8d8e8;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #a8c8e8;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: #6a8aa8;
+}
