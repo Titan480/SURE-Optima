@@ -1,5 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
-  <polyline points="4,72 24,48 44,72"  fill="none" stroke="#f7941d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <polyline points="20,52 40,28 60,52" fill="none" stroke="#f7941d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <polyline points="36,32 56,8 76,32"  fill="none" stroke="#f7941d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 102" width="56" height="102">
+  <!-- Chevron 1 (bottom) -->
+  <polygon points="4,20 28,2 52,20 48,28 28,10 8,28" fill="#f7941d"/>
+  <!-- Chevron 2 -->
+  <polygon points="4,44 28,26 52,44 48,52 28,34 8,52" fill="#f7941d"/>
+  <!-- Chevron 3 -->
+  <polygon points="4,68 28,50 52,68 48,76 28,58 8,76" fill="#f7941d"/>
+  <!-- Chevron 4 (top) -->
+  <polygon points="4,92 28,74 52,92 48,100 28,82 8,100" fill="#f7941d"/>
 </svg>
