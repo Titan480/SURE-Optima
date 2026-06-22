@@ -446,6 +446,66 @@ nav {
   text-transform: uppercase;
 }
 
+/* ── §6 Clients & Partners Carousel ── */
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 0 0.5rem;
+  cursor: default;
+}
+
+.carousel-wrapper:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: carousel-scroll 32s linear infinite;
+}
+
+@keyframes carousel-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.carousel-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--white);
+  border: 1.5px solid var(--gray-mid);
+  border-radius: 6px;
+  padding: 1.5rem 1.75rem;
+  min-width: 180px;
+  flex-shrink: 0;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.carousel-card:hover {
+  border-color: var(--orange);
+  box-shadow: 0 4px 16px rgba(247, 148, 29, 0.12);
+}
+
+.carousel-arrows {
+  display: block;
+  width: 72px;
+  height: auto;
+}
+
+.carousel-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.03em;
+  text-align: center;
+  white-space: nowrap;
+}
+
 /* ── Footer ── */
 
 footer {
