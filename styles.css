@@ -59,6 +59,10 @@ nav {
   letter-spacing: 0.06em;
 }
 
+.brand-sure {
+  color: var(--orange);
+}
+
 .nav-cta {
   color: var(--orange);
   font-weight: 700;
