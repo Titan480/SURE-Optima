@@ -424,6 +424,19 @@ nav {
   resize: vertical;
 }
 
+.form-success {
+  padding: 2.5rem 2rem;
+  background: var(--gray-light);
+  border-left: 4px solid var(--orange);
+  border-radius: 0 4px 4px 0;
+}
+
+.form-success p {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--black);
+}
+
 .location-note {
   margin-top: 1.75rem;
   font-size: 0.85rem;

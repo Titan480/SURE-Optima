@@ -205,7 +205,7 @@
       <div class="container contact-inner">
         <h2 class="section-title">Let's find out if there's a fit.</h2>
 
-        <form name="contact" method="POST" action="/thank-you" data-netlify="true" class="contact-form">
+        <form id="contact-form" name="contact" method="POST" data-netlify="true" class="contact-form">
           <input type="hidden" name="form-name" value="contact">
 
           <div class="form-row">
@@ -232,6 +232,10 @@
           <button type="submit" class="btn">Send Message</button>
         </form>
 
+        <div id="form-success" class="form-success" style="display:none;">
+          <p>Thank you for reaching out. We'll be in touch soon.</p>
+        </div>
+
         <p class="location-note">San Diego based. US focused. Globally capable.</p>
       </div>
     </section>
@@ -245,6 +249,28 @@
       <p class="copyright">&copy; 2026 SURE Optima. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const data = new URLSearchParams(new FormData(form)).toString();
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: data
+      })
+      .then(function () {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      })
+      .catch(function () {
+        alert('Something went wrong. Please try again or email us directly.');
+      });
+    });
+  </script>
 
 </body>
 </html>
