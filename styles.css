@@ -546,11 +546,39 @@ nav {
 .card-closing {
   font-style: italic;
   font-size: 0.88rem;
-  color: var(--gray-text);
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--gray-mid);
+  color: var(--orange);
   line-height: 1.65;
+}
+
+/* ── Value card layout (equal height, anchored footer) ── */
+
+.cards-value {
+  grid-auto-rows: 440px;
+}
+
+.cards-value .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-top {
+  flex: 1;
+  overflow: hidden;
+}
+
+.card-bottom {
+  flex-shrink: 0;
+  border-top: 1px solid var(--gray-mid);
+  padding-top: 1rem;
+  margin-top: 1.25rem;
+}
+
+.cards-value .card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  margin-bottom: 1rem;
+  color: var(--black);
 }
 
 /* ── About teaser paragraph ── */
@@ -730,6 +758,10 @@ footer {
 
   .cards-3col {
     grid-template-columns: 1fr;
+  }
+
+  .cards-value {
+    grid-auto-rows: auto;
   }
 
   .hero {
