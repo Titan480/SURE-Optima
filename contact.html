@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | SURE Optima</title>
+  <meta name="description" content="Start a conversation with SURE Optima. Tell us about your challenge and we'll reach out properly prepared.">
+  <link rel="canonical" href="https://sureoptima.com/contact.html">
+  <meta property="og:title" content="Contact | SURE Optima">
+  <meta property="og:description" content="Start a conversation with SURE Optima. Tell us about your challenge and we'll reach out properly prepared.">
+  <meta property="og:image" content="https://sureoptima.com/SURE_Optima_Logo_Black_Background_2x3.png">
+  <meta property="og:image:width" content="900">
+  <meta property="og:image:height" content="675">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sureoptima.com/contact.html">
+  <meta property="og:site_name" content="SURE Optima">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .intake-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3.5rem 0 5rem;
+    }
+
+    .intake-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .intake-header h1 {
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .intake-header p {
+      font-size: 1rem;
+      color: #aaaaaa;
+      font-style: italic;
+    }
+
+    .intake-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .intake-section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--orange);
+    }
+
+    .intake-section-number {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--orange);
+      background: rgba(247,148,29,0.12);
+      padding: 0.2rem 0.55rem;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .intake-section-title {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .intake-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .intake-field label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #cccccc;
+    }
+
+    .intake-field input,
+    .intake-field textarea {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.95rem;
+      color: var(--white);
+      background: #1a1a1a;
+      border: 1.5px solid #333333;
+      border-radius: 3px;
+      padding: 0.75rem 1rem;
+      outline: none;
+      width: 100%;
+      transition: border-color 0.2s;
+    }
+
+    .intake-field input::placeholder,
+    .intake-field textarea::placeholder {
+      color: #555555;
+    }
+
+    .intake-field input:focus,
+    .intake-field textarea:focus {
+      border-color: var(--orange);
+    }
+
+    .intake-field textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .intake-field.has-error input,
+    .intake-field.has-error textarea {
+      border-color: #e05252;
+    }
+
+    .field-error {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #e05252;
+    }
+
+    .field-optional {
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: #666666;
+      letter-spacing: 0.03em;
+      margin-left: 0.35rem;
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.1rem;
+    }
+
+    /* Pill selects */
+    .pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .pill {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: #aaaaaa;
+      background: transparent;
+      border: 1.5px solid #333333;
+      border-radius: 100px;
+      padding: 0.45rem 1rem;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+      user-select: none;
+    }
+
+    .pill:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+
+    .pill.selected {
+      border-color: var(--orange);
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    /* Dropdown */
+    .intake-field select {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.95rem;
+      color: var(--white);
+      background: #1a1a1a;
+      border: 1.5px solid #333333;
+      border-radius: 3px;
+      padding: 0.75rem 1rem;
+      outline: none;
+      width: 100%;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23aaaaaa' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .intake-field select:focus {
+      border-color: var(--orange);
+    }
+
+    .intake-field select option {
+      background: #1a1a1a;
+      color: var(--white);
+    }
+
+    .intake-field.has-error select {
+      border-color: #e05252;
+    }
+
+    /* Submit button */
+    .intake-submit {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn-submit {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--white);
+      background: var(--orange);
+      border: none;
+      border-radius: 3px;
+      padding: 0.9rem 2.5rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-submit:hover {
+      background: #e07f10;
+      transform: translateY(-1px);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Success / error messages */
+    .form-result {
+      padding: 2rem 2rem;
+      border-radius: 4px;
+      margin-top: 2rem;
+      display: none;
+    }
+
+    .form-result.success {
+      background: #0f1f0f;
+      border-left: 4px solid #4caf50;
+    }
+
+    .form-result.failure {
+      background: #1f0f0f;
+      border-left: 4px solid #e05252;
+    }
+
+    .form-result p {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    .form-result a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+
+    @media (max-width: 680px) {
+      .form-row-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .intake-wrapper {
+        padding: 2.5rem 0 4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand"><span class="brand-sure">SURE</span> Optima</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="specialties.html" class="nav-link">Specialties</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="insights.html" class="nav-link">Insights</a>
+        <a href="tldr.html" class="nav-link">TL;DR</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </div>
+      <a href="contact.html" class="nav-cta">Let's Connect</a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header" style="padding-bottom: 0;">
+    <div class="container">
+      <p class="tagline">Start the Conversation</p>
+      <h1>Let's See If We're a Fit</h1>
+    </div>
+  </section>
+
+  <!-- Dark background wrapper for the whole form -->
+  <div style="background: var(--black);">
+    <div class="container">
+      <div class="intake-wrapper">
+
+        <div class="intake-header">
+          <p>Five questions. No wrong answers. We read every word.</p>
+        </div>
+
+        <div id="intake-form-root"></div>
+
+        <div id="form-success" class="form-result success">
+          <p>We've got it. We'll look through what you shared and reach out soon — properly prepared.</p>
+        </div>
+
+        <div id="form-failure" class="form-result failure">
+          <p>Something went wrong. Please try again or email us directly at <a href="mailto:jdswartz@sureoptima.com">jdswartz@sureoptima.com</a></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-brand"><span class="brand-sure">SURE</span> Optima</span>
+      <p class="copyright">&copy; 2026 SURE Optima. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- React + Babel via CDN -->
+  <script crossorigin src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.23.3/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState, useCallback } = React;
+
+    const WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/28025643/42f2twk/";
+
+    const ROADBLOCK_OPTIONS = [
+      { key: "bandwidth", label: "Lack of internal bandwidth" },
+      { key: "expertise", label: "Need specialized expertise" },
+      { key: "ceiling", label: "Hit a ceiling with our current setup" },
+      { key: "other", label: "Other" },
+    ];
+
+    const TIMELINE_OPTIONS = [
+      { value: "", label: "Select one..." },
+      { value: "weeks", label: "Just came up (weeks)" },
+      { value: "months", label: "Been building for a while (months)" },
+      { value: "long", label: "This has been open a long time (6+ months)" },
+    ];
+
+    const COLLAB_OPTIONS = [
+      { key: "handoff", label: "Hand off the vision and let the experts run" },
+      { key: "close", label: "Close collaboration, step by step" },
+      { key: "defined", label: "Specific execution support on defined tasks" },
+      { key: "other", label: "Other" },
+    ];
+
+    const NEXT_STEP_OPTIONS = [
+      { key: "call", label: "A quick call to see if there's a fit" },
+      { key: "email", label: "An email exchange first" },
+      { key: "proposal", label: "A proposal or overview of how you work" },
+      { key: "open", label: "Not sure yet — open to your recommendation" },
+      { key: "other", label: "Other" },
+    ];
+
+    function PillSelect({ options, value, onChange, hasError }) {
+      return (
+        <div className="pill-group" style={hasError ? { outline: "none" } : {}}>
+          {options.map(opt => (
+            <button
+              key={opt.key}
+              type="button"
+              className={`pill${value === opt.key ? " selected" : ""}`}
+              onClick={() => onChange(opt.key)}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
+      );
+    }
+
+    function Field({ label, optional, error, children }) {
+      return (
+        <div className={`intake-field${error ? " has-error" : ""}`}>
+          <label>
+            {label}
+            {optional && <span className="field-optional">(optional)</span>}
+          </label>
+          {children}
+          {error && <span className="field-error">{error}</span>}
+        </div>
+      );
+    }
+
+    function IntakeForm() {
+      const [fields, setFields] = useState({
+        firstName: "", lastName: "", company: "", phone: "", email: "",
+        location: "", website: "", catalyst: "", vision: "", roadblock: "", roadblockOther: "",
+        timeline: "", avoidance: "", collabStyle: "", collabOther: "", nextStep: "", nextStepOther: "", extra: ""
+      });
+      const [errors, setErrors] = useState({});
+      const [submitting, setSubmitting] = useState(false);
+
+      const set = (key) => (e) => setFields(f => ({ ...f, [key]: typeof e === "string" ? e : e.target.value }));
+      const setPill = (key) => (val) => setFields(f => ({ ...f, [key]: val }));
+
+      function validate() {
+        const e = {};
+        if (!fields.firstName.trim()) e.firstName = "First name is required.";
+        if (!fields.lastName.trim()) e.lastName = "Last name is required.";
+        if (!fields.company.trim()) e.company = "Company name is required.";
+        if (!fields.phone.trim()) e.phone = "Phone is required.";
+        if (!fields.email.trim()) e.email = "Email is required.";
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) e.email = "Enter a valid email address.";
+        if (!fields.location.trim()) e.location = "Location is required.";
+        if (!fields.catalyst.trim()) e.catalyst = "This field is required.";
+        if (!fields.vision.trim()) e.vision = "This field is required.";
+        if (!fields.roadblock) e.roadblock = "Please select an option.";
+        if (fields.roadblock === "other" && !fields.roadblockOther.trim()) e.roadblockOther = "Please tell us more.";
+        if (!fields.timeline) e.timeline = "Please select a timeline.";
+        if (!fields.collabStyle) e.collabStyle = "Please select an option.";
+        if (fields.collabStyle === "other" && !fields.collabOther.trim()) e.collabOther = "Please tell us more.";
+        if (!fields.nextStep) e.nextStep = "Please select an option.";
+        if (fields.nextStep === "other" && !fields.nextStepOther.trim()) e.nextStepOther = "Please tell us more.";
+        return e;
+      }
+
+      async function handleSubmit(e) {
+        e.preventDefault();
+        const errs = validate();
+        if (Object.keys(errs).length) {
+          setErrors(errs);
+          const firstKey = Object.keys(errs)[0];
+          document.querySelector(`[data-field="${firstKey}"]`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+          return;
+        }
+        setErrors({});
+        setSubmitting(true);
+
+        const roadblockLabel = ROADBLOCK_OPTIONS.find(o => o.key === fields.roadblock)?.label || fields.roadblock;
+        const timelineLabel = TIMELINE_OPTIONS.find(o => o.value === fields.timeline)?.label || fields.timeline;
+        const collabLabel = COLLAB_OPTIONS.find(o => o.key === fields.collabStyle)?.label || fields.collabStyle;
+        const nextStepLabel = NEXT_STEP_OPTIONS.find(o => o.key === fields.nextStep)?.label || fields.nextStep;
+
+        const payload = {
+          firstName: fields.firstName,
+          lastName: fields.lastName,
+          company: fields.company,
+          phone: fields.phone,
+          email: fields.email,
+          location: fields.location,
+          website: fields.website,
+          catalyst: fields.catalyst,
+          vision: fields.vision,
+          roadblock: roadblockLabel,
+          roadblockOther: fields.roadblockOther,
+          timeline: timelineLabel,
+          avoidance: fields.avoidance,
+          collabStyle: collabLabel,
+          collabOther: fields.collabOther,
+          nextStep: nextStepLabel,
+          nextStepOther: fields.nextStepOther,
+          extra: fields.extra,
+          timestamp: new Date().toISOString(),
+        };
+
+        try {
+          const res = await fetch(WEBHOOK_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+          if (!res.ok) throw new Error("Non-OK response");
+          document.getElementById("intake-form-root").style.display = "none";
+          const s = document.getElementById("form-success");
+          s.style.display = "block";
+          window.scrollTo({ top: s.offsetTop - 100, behavior: "smooth" });
+        } catch {
+          const f = document.getElementById("form-failure");
+          f.style.display = "block";
+          window.scrollTo({ top: f.offsetTop - 100, behavior: "smooth" });
+        } finally {
+          setSubmitting(false);
+        }
+      }
+
+      return (
+        <form onSubmit={handleSubmit} noValidate>
+
+          {/* SECTION 1 */}
+          <div className="intake-section">
+            <div className="intake-section-header">
+              <span className="intake-section-number">01</span>
+              <span className="intake-section-title">Identity &amp; Footprint</span>
+            </div>
+            <div className="form-row-2">
+              <div data-field="firstName">
+                <Field label="First Name" error={errors.firstName}>
+                  <input type="text" value={fields.firstName} onChange={set("firstName")} placeholder="Jane" />
+                </Field>
+              </div>
+              <div data-field="lastName">
+                <Field label="Last Name" error={errors.lastName}>
+                  <input type="text" value={fields.lastName} onChange={set("lastName")} placeholder="Smith" />
+                </Field>
+              </div>
+            </div>
+            <div data-field="company">
+              <Field label="Company Name" error={errors.company}>
+                <input type="text" value={fields.company} onChange={set("company")} placeholder="Acme Corp" />
+              </Field>
+            </div>
+            <div className="form-row-2">
+              <div data-field="phone">
+                <Field label="Phone" error={errors.phone}>
+                  <input type="tel" value={fields.phone} onChange={set("phone")} placeholder="+1 (555) 000-0000" />
+                </Field>
+              </div>
+              <div data-field="email">
+                <Field label="Email" error={errors.email}>
+                  <input type="email" value={fields.email} onChange={set("email")} placeholder="yourname@company.com" />
+                </Field>
+              </div>
+            </div>
+            <div data-field="location">
+              <Field label="Location" error={errors.location}>
+                <input type="text" value={fields.location} onChange={set("location")} placeholder="City, State or Zip Code" />
+              </Field>
+            </div>
+            <div data-field="website">
+              <Field label="Website or LinkedIn" optional error={errors.website}>
+                <input type="text" value={fields.website} onChange={set("website")} placeholder="https://" />
+              </Field>
+            </div>
+          </div>
+
+          {/* SECTION 2 */}
+          <div className="intake-section">
+            <div className="intake-section-header">
+              <span className="intake-section-number">02</span>
+              <span className="intake-section-title">The Catalyst</span>
+            </div>
+            <div data-field="catalyst">
+              <Field label="What specific challenge or opportunity prompted you to reach out today?" error={errors.catalyst}>
+                <textarea value={fields.catalyst} onChange={set("catalyst")} rows={5} placeholder="Tell us what's going on..." />
+              </Field>
+            </div>
+          </div>
+
+          {/* SECTION 3 */}
+          <div className="intake-section">
+            <div className="intake-section-header">
+              <span className="intake-section-number">03</span>
+              <span className="intake-section-title">The Vision</span>
+            </div>
+            <div data-field="vision">
+              <Field label="If this goes incredibly well, what does success look like for your business?" error={errors.vision}>
+                <textarea value={fields.vision} onChange={set("vision")} rows={5} placeholder="Paint the picture..." />
+              </Field>
+            </div>
+          </div>
+
+          {/* SECTION 4 */}
+          <div className="intake-section">
+            <div className="intake-section-header">
+              <span className="intake-section-number">04</span>
+              <span className="intake-section-title">Current State vs. Desired State</span>
+            </div>
+            <div data-field="roadblock">
+              <Field label="What's the biggest thing standing between where you are now and that outcome?" error={errors.roadblock}>
+                <PillSelect
+                  options={ROADBLOCK_OPTIONS}
+                  value={fields.roadblock}
+                  onChange={setPill("roadblock")}
+                  hasError={!!errors.roadblock}
+                />
+              </Field>
+            </div>
+            {fields.roadblock === "other" && (
+              <div data-field="roadblockOther">
+                <Field label="Tell us more..." error={errors.roadblockOther}>
+                  <textarea value={fields.roadblockOther} onChange={set("roadblockOther")} rows={3} placeholder="Describe your situation..." />
+                </Field>
+              </div>
+            )}
+            <div data-field="timeline">
+              <Field label="How long has this been on your radar?" error={errors.timeline}>
+                <select value={fields.timeline} onChange={set("timeline")}>
+                  {TIMELINE_OPTIONS.map(o => (
+                    <option key={o.value} value={o.value} disabled={o.value === ""}>{o.label}</option>
+                  ))}
+                </select>
+              </Field>
+            </div>
+            <div data-field="avoidance">
+              <Field label="Is there anything you've already tried, or an approach you'd want to avoid?" optional error={errors.avoidance}>
+                <textarea value={fields.avoidance} onChange={set("avoidance")} rows={4} placeholder="Anything off the table, or lessons already learned..." />
+              </Field>
+            </div>
+          </div>
+
+          {/* SECTION 5 */}
+          <div className="intake-section">
+            <div className="intake-section-header">
+              <span className="intake-section-number">05</span>
+              <span className="intake-section-title">Collaboration, Next Steps &amp; Anything Else</span>
+            </div>
+            <div data-field="collabStyle">
+              <Field label="How do you prefer to work with outside partners?" error={errors.collabStyle}>
+                <PillSelect
+                  options={COLLAB_OPTIONS}
+                  value={fields.collabStyle}
+                  onChange={setPill("collabStyle")}
+                  hasError={!!errors.collabStyle}
+                />
+              </Field>
+            </div>
+            {fields.collabStyle === "other" && (
+              <div data-field="collabOther">
+                <Field label="Tell us more about how you like to work..." error={errors.collabOther}>
+                  <textarea value={fields.collabOther} onChange={set("collabOther")} rows={3} placeholder="Describe your preferred working style..." />
+                </Field>
+              </div>
+            )}
+            <div data-field="nextStep">
+              <Field label="What would feel like the right next step?" error={errors.nextStep}>
+                <PillSelect
+                  options={NEXT_STEP_OPTIONS}
+                  value={fields.nextStep}
+                  onChange={setPill("nextStep")}
+                  hasError={!!errors.nextStep}
+                />
+              </Field>
+            </div>
+            {fields.nextStep === "other" && (
+              <div data-field="nextStepOther">
+                <Field label="What did you have in mind?" error={errors.nextStepOther}>
+                  <textarea value={fields.nextStepOther} onChange={set("nextStepOther")} rows={3} placeholder="Tell us what you're thinking..." />
+                </Field>
+              </div>
+            )}
+            <div data-field="extra">
+              <Field label="Anything else you'd like us to know before we connect?" optional error={errors.extra}>
+                <textarea value={fields.extra} onChange={set("extra")} rows={4} placeholder="No pressure — but this is your space." />
+              </Field>
+            </div>
+          </div>
+
+          <div className="intake-submit">
+            <button type="submit" className="btn-submit" disabled={submitting}>
+              {submitting ? "Sending..." : "Send it over →"}
+            </button>
+          </div>
+
+        </form>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("intake-form-root"));
+    root.render(<IntakeForm />);
+  </script>
+
+</body>
+</html>

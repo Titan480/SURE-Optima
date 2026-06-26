@@ -52,8 +52,9 @@
         <a href="insights.html" class="nav-link">Insights</a>
         <a href="tldr.html" class="nav-link">TL;DR</a>
         <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </div>
-      <a href="#contact" class="nav-cta">Let's Connect</a>
+      <a href="contact.html" class="nav-cta">Let's Connect</a>
     </div>
   </nav>
 
@@ -300,41 +301,11 @@
 
         <!-- §8 Contact -->
     <section id="contact" class="section-light">
-      <div class="container contact-inner">
-        <h2 class="section-title">Let's find out if there's a fit.</h2>
-
-        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify class="contact-form">
-          <input type="hidden" name="form-name" value="contact">
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" required placeholder="Jane Smith">
-            </div>
-            <div class="form-group">
-              <label for="company">Company</label>
-              <input type="text" id="company" name="company" placeholder="Acme Corp">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="jane@acme.com">
-          </div>
-
-          <div class="form-group">
-            <label for="message">Tell me what you're working on</label>
-            <textarea id="message" name="message" rows="6" required placeholder="Give me the real situation..."></textarea>
-          </div>
-
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-
-        <div id="form-success" class="form-success" style="display:none;">
-          <p>Thank you for reaching out. We'll be in touch soon.</p>
-        </div>
-
-        <p class="location-note">San Diego based. US focused. Globally capable.</p>
+      <div class="container" style="text-align: center; max-width: 640px;">
+        <h2 class="section-title" style="display: inline-block;">Ready to start a conversation?</h2>
+        <p style="font-size: 1.05rem; color: var(--gray-text); margin-top: -1.5rem; margin-bottom: 2rem; line-height: 1.75;">It starts with a few good questions.</p>
+        <a href="contact.html" class="btn">Let's See If We're a Fit</a>
+        <p class="location-note" style="margin-top: 2rem;">San Diego based. US focused. Globally capable.</p>
       </div>
     </section>
 
@@ -348,27 +319,6 @@
     </div>
   </footer>
 
-  <script>
-    const form = document.getElementById('contact-form');
-    const success = document.getElementById('form-success');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const data = new URLSearchParams(new FormData(form)).toString();
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: data
-      })
-      .then(function () {
-        form.style.display = 'none';
-        success.style.display = 'block';
-      })
-      .catch(function () {
-        alert('Something went wrong. Please try again or email us directly.');
-      });
-    });
-  </script>
 
 </body>
 </html>
