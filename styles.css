@@ -636,11 +636,48 @@ nav {
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* ── White background section (explicit, avoids nth-of-type) ── */
+
+.section-white {
+  padding: 5rem 0;
+  background: var(--white);
+}
+
 /* ── Gray background section ── */
 
 .section-gray {
   padding: 5rem 0;
   background: var(--gray-light);
+}
+
+/* ── Compact sections (TL;DR page) ── */
+
+.section-dark.section-compact,
+.section-light.section-compact,
+.section-gray.section-compact,
+.section-white.section-compact {
+  padding: 2.5rem 0;
+}
+
+/* ── TL;DR page body text ── */
+
+.tldr-intro {
+  font-size: 1.05rem;
+  color: #cccccc;
+  line-height: 1.8;
+}
+
+.tldr-close {
+  font-size: 1.05rem;
+  color: #cccccc;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.tldr-close--emphasis {
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 2rem;
 }
 
 /* ── Content type label (solid orange — published content) ── */

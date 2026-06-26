@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TL;DR | SURE Optima</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @media print {
+      nav, footer { display: none !important; }
+      .page-header { padding: 0.75rem 0 !important; }
+      .page-header h1 { font-size: 1.4rem; }
+      .page-header .tagline { margin-bottom: 0.2rem; }
+      .section-dark,
+      .section-white,
+      .section-gray,
+      .section-compact { padding: 1rem 0 !important; }
+      .section-dark { background: #ffffff !important; color: #111111 !important; }
+      .section-title { font-size: 1.05rem !important; margin-bottom: 0.75rem !important; }
+      .section-title.light { color: #111111 !important; }
+      .section-title::after { display: none; }
+      body { font-size: 0.78rem; line-height: 1.4; }
+      .card { padding: 0.65rem 0.85rem; box-shadow: none; }
+      .card h3, .card p { font-size: 0.78rem; }
+      .card h3 { margin-bottom: 0.3rem; }
+      .cards { gap: 0.6rem; }
+      .cards-3col { grid-template-columns: repeat(3, 1fr); }
+      .step { padding: 0.5rem 0.5rem; }
+      .step-number { font-size: 1.1rem; margin-bottom: 0.2rem; }
+      .step h3 { font-size: 0.78rem; margin-bottom: 0.2rem; }
+      .step p { font-size: 0.78rem; }
+      .step-arrow { font-size: 1rem; padding-top: 1.2rem; }
+      .tldr-intro, .tldr-close { font-size: 0.82rem; color: #333333 !important; line-height: 1.5; }
+      .card-label { background: transparent !important; color: #111111 !important; border: 1px solid #111111; }
+      .card, .step { break-inside: avoid; }
+      .btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand"><span class="brand-sure">SURE</span> Optima</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="specialties.html" class="nav-link">Specialties</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="insights.html" class="nav-link">Insights</a>
+        <a href="tldr.html" class="nav-link active">TL;DR</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+      <a href="index.html#contact" class="nav-cta">Let's Connect</a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <p class="tagline">The Short Version</p>
+      <h1>TL;DR</h1>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- §1 What We Do -->
+    <section class="section-dark section-compact">
+      <div class="container about-inner">
+        <h2 class="section-title light">What We Do</h2>
+        <p class="tldr-intro">SURE Optima is a consulting practice built for hard problems. We work with startups, growing businesses, and companies in transition to find the work that matters, define the path forward, and drive it to execution. From clarity to scale.</p>
+      </div>
+    </section>
+
+    <!-- §2 Who We Work With -->
+    <section class="section-white section-compact">
+      <div class="container">
+        <h2 class="section-title">Who We Work With</h2>
+        <div class="cards">
+
+          <div class="card">
+            <h3>Startups with a Product</h3>
+            <p>You have something real and need the next step, the right path, and a partner focused on getting you where you need to be.</p>
+          </div>
+
+          <div class="card">
+            <h3>Organizations Needing a Nudge</h3>
+            <p>Growth stalled, processes broken, constraints tightened — you need the blockers found, removed, and flow restored.</p>
+          </div>
+
+          <div class="card">
+            <h3>Companies in Transition</h3>
+            <p>Acquisition, integration, or pivot — high stakes and pressure to get it right with no time for a learning curve.</p>
+          </div>
+
+          <div class="card">
+            <h3>Companies Ready to Collaborate</h3>
+            <p>Aligned ambitions but a distance between them — you need common ground built and a bridge so both sides can win.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- §3 What We've Done -->
+    <section class="section-gray section-compact">
+      <div class="container">
+        <h2 class="section-title">What We've Done</h2>
+        <div class="cards cards-3col">
+
+          <div class="card">
+            <span class="card-label">Strategic Consulting</span>
+            <p>A firm consolidating acquired assets needed to understand what they had, how it aligned to their growth targets, and what to do next. We assessed the portfolio, mapped it to the market, and built the strategy to move forward.</p>
+          </div>
+
+          <div class="card">
+            <span class="card-label">Launch Consulting</span>
+            <p>A new company entering a technical market needed to launch fast. We brought the domain expertise and commercial experience to accelerate from standing start to market entry.</p>
+          </div>
+
+          <div class="card">
+            <span class="card-label">Fractional COO &amp; Product Development</span>
+            <p>A startup five years in was spinning its wheels — too many directions, development cycles that never delivered, and no market traction. We narrowed the focus, restarted product development, and launched the first product for real market validation.</p>
+          </div>
+
+          <div class="card">
+            <span class="card-label">Customer Insight &amp; Analysis</span>
+            <p>A distribution partner had a major customer opportunity that kept falling apart. Nobody could identify why. We analyzed the relationship, identified the gaps, and gave both sides a clear picture of what needed to change.</p>
+          </div>
+
+          <div class="card">
+            <span class="card-label">Technology Strategy</span>
+            <p>A large industrial manufacturer needed to understand how emerging technology could be integrated into their production ecosystem to improve uptime and identify broader gains. We assessed the landscape, matched capabilities to real production needs, and built the deployment strategy across multiple facilities.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- §4 How It Works -->
+    <section class="section-white section-compact">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-number">01</div>
+            <h3>Discovery</h3>
+            <p>A conversation with no assumptions and no pitch. We learn your situation, your goals, and whether there is a genuine fit.</p>
+          </div>
+
+          <div class="step-arrow">&#8594;</div>
+
+          <div class="step">
+            <div class="step-number">02</div>
+            <h3>Alignment &amp; Scope</h3>
+            <p>We define the work together. What are we solving, what does success look like, and what is the path to get there.</p>
+          </div>
+
+          <div class="step-arrow">&#8594;</div>
+
+          <div class="step">
+            <div class="step-number">03</div>
+            <h3>Documentation</h3>
+            <p>We formalize the engagement with the right paperwork for the situation — NDA, Statement of Work, or letter of engagement.</p>
+          </div>
+
+          <div class="step-arrow">&#8594;</div>
+
+          <div class="step">
+            <div class="step-number">04</div>
+            <h3>Kickoff</h3>
+            <p>Work begins. Roles are defined, cadence is set, and we get after it.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- §5 Why SURE Optima -->
+    <section class="section-dark section-compact">
+      <div class="container about-inner">
+        <h2 class="section-title light">Why SURE Optima</h2>
+        <p class="tldr-close">We don't bring a predetermined answer. We learn your business fast, diagnose the reality, and attack the areas that will move things forward. The goal is never dependency — if we do our job right, you'll be stronger without us than you were with us.</p>
+        <p class="tldr-close tldr-close--emphasis">Every engagement is different. The commitment is the same.</p>
+        <a href="index.html#contact" class="btn">Let's find out if there's a fit</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-brand"><span class="brand-sure">SURE</span> Optima</span>
+      <p class="copyright">&copy; 2026 SURE Optima. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
