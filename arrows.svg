@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 61.2 61.18">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 71.44 71.5">
   <!-- Generator: Adobe Illustrator 30.5.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 3)  -->
   <defs>
     <style>
       .st0 {
+        fill: #fff;
+      }
+
+      .st1 {
+        fill: none;
+      }
+
+      .st2 {
         fill: #f6921e;
       }
     </style>
   </defs>
-  <polygon class="st0" points="14.57 0 0 23.54 8.17 23.54 7.99 52.18 21.65 36.82 21.46 23.54 29.19 23.43 14.57 0"/>
-  <polygon class="st0" points="61.2 46.61 37.66 61.18 37.66 53.01 9.02 53.19 24.38 39.53 37.66 39.72 37.77 31.99 61.2 46.61"/>
-  <polygon points="23.57 27.3 33.36 37.02 33.32 27.43 23.57 27.3"/>
-  <polygon points="29.94 20.93 39.73 30.66 39.68 21.06 29.94 20.93"/>
-  <polygon points="36.3 14.57 46.09 24.29 46.05 14.7 36.3 14.57"/>
+  <polygon class="st2" points="39.31 4.7 66.73 31.7 66.79 4.77 39.31 4.7"/>
+  <rect class="st1" width="71.44" height="71.5"/>
+  <rect class="st0" x="42.39" y="10.17" width="18.5" height="18.5"/>
+  <polygon class="st2" points="21.3 22.77 48.72 49.77 48.78 22.83 21.3 22.77"/>
+  <rect class="st0" x="23.89" y="28.83" width="18.5" height="18.5"/>
+  <polygon class="st2" points="3.28 40.83 30.71 67.83 30.77 40.9 3.28 40.83"/>
+  <rect class="st0" x="6.56" y="46.72" width="18.5" height="18.5"/>
 </svg>
