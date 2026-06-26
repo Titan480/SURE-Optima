@@ -484,18 +484,16 @@
           timestamp: new Date().toISOString(),
         };
 
-        fetch(WEBHOOK_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
+        fetch('https://script.google.com/macros/s/AKfycbwKAQbLRJNQMHUqx6nhyB86--SKbQea5hp6sWTRgQavdOR82oe6RWjBCk_Bsz_WEPVw/exec', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify(payload)
         })
         .then(function() {
-          setSubmitting(false);
           setSubmitted(true);
         })
         .catch(function() {
-          setSubmitting(false);
           setFailed(true);
         });
       }
