@@ -418,6 +418,8 @@
       });
       const [errors, setErrors] = useState({});
       const [submitting, setSubmitting] = useState(false);
+      const [submitted, setSubmitted] = useState(false);
+      const [failed, setFailed] = useState(false);
 
       const set = (key) => (e) => setFields(f => ({ ...f, [key]: typeof e === "string" ? e : e.target.value }));
       const setPill = (key) => (val) => setFields(f => ({ ...f, [key]: val }));
@@ -443,7 +445,7 @@
         return e;
       }
 
-      async function handleSubmit(e) {
+      function handleSubmit(e) {
         e.preventDefault();
         const errs = validate();
         if (Object.keys(errs).length) {
@@ -482,24 +484,28 @@
           timestamp: new Date().toISOString(),
         };
 
-        try {
-          const res = await fetch(WEBHOOK_URL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload),
-          });
-          if (!res.ok) throw new Error("Non-OK response");
-          document.getElementById("intake-form-root").style.display = "none";
-          const s = document.getElementById("form-success");
-          s.style.display = "block";
-          window.scrollTo({ top: s.offsetTop - 100, behavior: "smooth" });
-        } catch {
-          const f = document.getElementById("form-failure");
-          f.style.display = "block";
-          window.scrollTo({ top: f.offsetTop - 100, behavior: "smooth" });
-        } finally {
+        fetch(WEBHOOK_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        })
+        .then(function() {
           setSubmitting(false);
-        }
+          setSubmitted(true);
+        })
+        .catch(function() {
+          setSubmitting(false);
+          setFailed(true);
+        });
+      }
+
+      if (submitted) {
+        return (
+          <div className="form-result success" style={{display: "block"}}>
+            <p>We've got it. We'll look through what you shared and reach out soon — properly prepared.</p>
+          </div>
+        );
       }
 
       return (
@@ -665,6 +671,11 @@
           </div>
 
           <div className="intake-submit">
+            {failed && (
+              <div className="form-result failure" style={{display: "block", width: "100%", marginBottom: "1rem"}}>
+                <p>Something went wrong. Please try again or email us directly at <a href="mailto:jdswartz@sureoptima.com">jdswartz@sureoptima.com</a></p>
+              </div>
+            )}
             <button type="submit" className="btn-submit" disabled={submitting}>
               {submitting ? "Sending..." : "Send it over →"}
             </button>
