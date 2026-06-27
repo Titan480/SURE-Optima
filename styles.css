@@ -532,49 +532,50 @@ nav {
   text-transform: uppercase;
 }
 
-/* ── §7 Clients & Partners Grid ── */
+/* ── §7 Clients & Partners Ticker ── */
 
-.client-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
+.ticker-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background: var(--black);
+  border-top: 1px solid var(--orange);
+  border-bottom: 1px solid var(--orange);
+  padding: 1.25rem 0;
+  margin-top: 2.5rem;
+  cursor: default;
 }
 
-.client-card {
+.ticker-wrapper:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+.ticker-track {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  background: var(--white);
-  border: 1.5px solid var(--gray-mid);
-  border-radius: 6px;
-  padding: 3rem 2rem;
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s, filter 0.2s;
+  width: max-content;
+  white-space: nowrap;
+  animation: ticker-scroll 40s linear infinite;
 }
 
-.client-card:hover {
-  border-color: var(--orange);
-  box-shadow: 0 4px 16px rgba(247, 148, 29, 0.12);
-  transform: scale(1.03);
-  filter: brightness(1.04);
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-.carousel-arrows {
-  display: block;
-  width: 60px;
-  height: auto;
-}
-
-.carousel-name {
-  font-size: 1rem;
+.ticker-item {
+  font-size: 1.15rem;
   font-weight: 700;
-  color: var(--black);
-  letter-spacing: 0.03em;
-  text-align: center;
-  white-space: normal;
-  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 0 2rem;
+}
+
+.ticker-sep {
+  color: var(--orange);
+  font-size: 0.55rem;
+  flex-shrink: 0;
+  line-height: 1;
 }
 
 /* ── Body text (light-section paragraphs) ── */
@@ -889,10 +890,6 @@ footer {
 
   .cards-3col {
     grid-template-columns: 1fr;
-  }
-
-  .client-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .cards-value {
