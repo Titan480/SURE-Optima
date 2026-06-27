@@ -534,6 +534,10 @@ nav {
 
 /* ── §7 Clients & Partners Ticker ── */
 
+.ticker-section {
+  padding: 1.5rem 0;
+}
+
 .ticker-wrapper {
   overflow: hidden;
   width: 100%;
@@ -541,7 +545,6 @@ nav {
   border-top: 1px solid var(--orange);
   border-bottom: 1px solid var(--orange);
   padding: 1.25rem 0;
-  margin-top: 2.5rem;
   cursor: default;
 }
 
@@ -573,7 +576,7 @@ nav {
 
 .ticker-sep {
   color: var(--orange);
-  font-size: 0.55rem;
+  font-size: 2rem;
   flex-shrink: 0;
   line-height: 1;
 }
