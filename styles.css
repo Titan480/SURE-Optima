@@ -61,7 +61,15 @@ nav {
 }
 
 .brand-sure {
+  color: var(--white);
+}
+
+.optima {
   color: var(--orange);
+}
+
+.optima { 
+  color: var(--orange); 
 }
 
 .nav-links {
@@ -185,7 +193,7 @@ nav {
 
 .hero-logo {
   display: block;
-  width: 180px;
+  width: 400px;
   height: auto;
   margin: 0 auto 2rem;
 }
