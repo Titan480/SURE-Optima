@@ -542,8 +542,8 @@ nav {
   overflow: hidden;
   width: 100%;
   background: var(--gray-light);
-  border-top: 1px solid var(--orange);
-  border-bottom: 1px solid var(--orange);
+  border-top: 1px solid var(--gray-light);
+  border-bottom: 1px solid var(--gray-light);
   padding: 1.25rem 0;
   cursor: default;
 }
@@ -575,8 +575,8 @@ nav {
 }
 
 .ticker-sep {
-  color: var(--gray-text);
-  font-size: 2rem;
+  color: var(--orange);
+  font-size: 1.495rem;
   flex-shrink: 0;
   line-height: 1;
 }
